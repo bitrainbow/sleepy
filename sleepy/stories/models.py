@@ -26,7 +26,15 @@ class ShortStory(Article):
     def __unicode__(self):
         return (self.title + ' - ' + str(self.author))
 
+    class Meta:
+        verbose_name = 'Short Story'
+        verbose_name_plural = 'Short Stories'
+
 
 class Poem(Article):
     def __unicode__(self):
         return (self.title + ' - ' + str(self.author))
+
+    class Meta:
+        verbose_name = 'Poem'
+        verbose_name_plural = 'Poems'
