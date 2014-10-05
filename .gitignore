@@ -1,2 +1,4 @@
 # ignore virtual enviorment.
-.env/
+
+env/*
+
