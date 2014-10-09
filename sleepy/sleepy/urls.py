@@ -6,6 +6,6 @@ urlpatterns = patterns(
     '',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^markdown/', include('django_markdown.urls')),
-    url(r'^blog/(?P<slug>\S)+', BlogDetail.as_view(), name="entry_detail"),
+    url(r'^blog/(?P<slug>[\w-]+)', BlogDetail.as_view(), name="entry_detail"),
     url(r'^blog/', BlogIndex.as_view(), name="entry_index"),
 )
