@@ -1,5 +1,7 @@
 Django==1.7
 Markdown==2.5.1
+PIL==1.1.7
 argparse==1.2.1
 django-markdown==0.7.0
+requests==2.4.1
 wsgiref==0.1.2

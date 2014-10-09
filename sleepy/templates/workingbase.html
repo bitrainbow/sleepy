@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <link rel="stylesheet" href={% block defaultcss %}{% endblock defaultcss %}>
+  
+  <link rel="stylesheet" href={% block extracss %}{% endblock extracss %}>
+  
+
+  {% block title %}
+  <title>Sleepy House Press</title>
+  {% endblock title %}
+  
+</head>
+
+<body>
+    <header>
+        {% block navbar %}
+        <div id='nav bar'>
+            <a href="/">home</a> <a href="/blog">blog</a> <a href="/stories">The press</a> <a href="/events"> Workshops</a> 
+        </div>
+        {% endblock navbar %}
+    </header>
+    <p>
+
+    {% block content %}
+    {% endblock content %}
+
+</body>
+
+</html>

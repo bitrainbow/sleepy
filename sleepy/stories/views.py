@@ -1,6 +1,6 @@
 # from django.shortcuts import render
 from django.views.generic import DetailView, ListView
-from stories.models import Author, ShortStory, Poem
+from models import Author, ShortStory, Poem
 
 
 class AuthorListView(ListView):

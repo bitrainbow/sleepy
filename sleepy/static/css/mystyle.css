@@ -1,0 +1,22 @@
+body {
+    background-color: #b0c4de;
+} 
+
+header {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100px;
+    right: 0;
+    border: 2px solid rgba(0,150,255,0.91);
+    font: normal 16px/1 "Times New Roman", Times, serif;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-box-shadow: 4px 4px 6px 1px rgba(0,0,0,0.4) ;
+    box-shadow: 4px 4px 6px 1px rgba(0,0,0,0.4) ;
+
+}
