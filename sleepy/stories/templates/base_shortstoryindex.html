@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load django_markdown %}
+
+
+<style>
+ .content {
+    color: #fcf;
+ }
+ </style>
+{% block content %}
+    
+{% for object in object_list %}
+       <h2> <a href="{{ object.slug }}">{{ object.title }}</a></h2> <p>
+            <h4> <i> {{ object.date_published }} </i> </h4>
+            <div id="content">    
+           <h3> {{ object.body|markdown }} </h3><p>
+            <p>
+              </div>      
+    {% endfor %}    
+{% endblock content %}
+

@@ -13,15 +13,19 @@ class AuthorDetailView(DetailView):
 
 class ShortStoryListView(ListView):
     model = ShortStory
+    template_name = 'base_shortstoryindex.html'
 
 
 class ShortStoryDetailView(DetailView):
     model = ShortStory
+    template_name = 'base_shortstorydetail.html'
 
 
 class PoemListView(ListView):
     model = Poem
+    template_name = 'base_poemindex.html'
 
 
 class PoemDetailView(DetailView):
     model = Poem
+    template_name = 'base_poemdetail.html'

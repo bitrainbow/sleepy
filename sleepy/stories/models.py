@@ -1,3 +1,4 @@
+from django.core.urlresolvers import reverse
 from django.db import models
 
 
@@ -17,14 +18,19 @@ class Article(models.Model):
     author = models.ForeignKey('Author')
     date_published = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
+    slug = models.SlugField(max_length=120)
+
+    def __unicode__(self):
+        return (self.title + ' - ' + str(self.author))
 
     class Meta:
         abstract = True
 
 
 class ShortStory(Article):
-    def __unicode__(self):
-        return (self.title + ' - ' + str(self.author))
+
+    def get_absolute_url(self):
+        return reverse("shortstory_detail", kwargs={"slug": self.slug})
 
     class Meta:
         verbose_name = 'Short Story'
@@ -32,8 +38,9 @@ class ShortStory(Article):
 
 
 class Poem(Article):
-    def __unicode__(self):
-        return (self.title + ' - ' + str(self.author))
+
+    def get_absolute_url(self):
+        return reverse("poem_detail", kwargs={"slug": self.slug})
 
     class Meta:
         verbose_name = 'Poem'
